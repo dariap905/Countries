@@ -10,8 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Countries">
+        android:theme="@style/Theme.Countries"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ThirdFragmentActivity"></activity>
+        <activity android:name=".DetailedCountryActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

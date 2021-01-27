@@ -1,29 +1,35 @@
-package com.example.countries;
+package com.example.countries.ui.main;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.ActionMode;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
+
+
+import com.example.countries.Country;
+import com.example.countries.CountryAPI;
+import com.example.countries.CountryAdapter;
+import com.example.countries.DetailedCountryActivity;
+import com.example.countries.R;
+import com.example.countries.SecondFragment;
 
 import java.util.ArrayList;
 
-public class SecondFragment extends Fragment {
+public class ThirdFragment extends Fragment {
 
     private ArrayList<Country> items;
+    private ArrayList<Country> selectedItems;
     private CountryAdapter adapter;
 
-    public static ArrayList<Country> selectedItems;
+    public static ThirdFragment newInstance() {
+        return new ThirdFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,7 +39,7 @@ public class SecondFragment extends Fragment {
         ListView lvCartas = view.findViewById(R.id.lvCountries);
 
         items = new ArrayList<>();
-        selectedItems = new ArrayList<>(2);
+        selectedItems = SecondFragment.selectedItems;
         adapter = new CountryAdapter(
                 getContext(),
                 R.layout.lv_countries_row,
@@ -41,35 +47,6 @@ public class SecondFragment extends Fragment {
         );
 
         lvCartas.setAdapter(adapter);
-
-/*        lvCartas.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        lvCartas.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
-
-            //whenever you select or deselect an item from the listview
-            @Override
-            public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-
-            }
-
-            @Override
-            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-                return false;
-            }
-
-            @Override
-            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-                return false;
-            }
-
-            @Override
-            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-            }
-
-            @Override
-            public void onDestroyActionMode(ActionMode mode) {
-
-            }
-        });*/
 
         lvCartas.setOnItemClickListener((adapter, fragment, i, l) -> {
             Country country = (Country) adapter.getItemAtPosition(i);
@@ -109,14 +86,6 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         refresh();
-
-/*        view.findViewById(R.id.button_choose_first_country).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_to_FirstFragment);
-            }
-        });*/
     }
 }
