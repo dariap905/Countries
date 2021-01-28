@@ -15,7 +15,8 @@ import androidx.fragment.app.Fragment;
 import com.example.countries.Country;
 import com.example.countries.CountryAPI;
 import com.example.countries.CountryAdapter;
-import com.example.countries.DetailedCountryActivity;
+import com.example.countries.DetailedActivity;
+import com.example.countries.DetailedActivity2;
 import com.example.countries.R;
 import com.example.countries.SecondFragment;
 
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 public class ThirdFragment extends Fragment {
 
     private ArrayList<Country> items;
-    private ArrayList<Country> selectedItems;
+    public static ArrayList<Country> selectedItems;
     private CountryAdapter adapter;
 
     public static ThirdFragment newInstance() {
@@ -52,7 +53,7 @@ public class ThirdFragment extends Fragment {
             Country country = (Country) adapter.getItemAtPosition(i);
             selectedItems.add(country);
 
-            Intent intent = new Intent(getContext(), DetailedCountryActivity.class);
+            Intent intent = new Intent(getContext(), DetailedActivity2.class);
             intent.putExtra("country", country);
             startActivity(intent);
         });
