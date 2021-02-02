@@ -37,35 +37,6 @@ public class SecondFragment extends Fragment {
 
         lvCartas.setAdapter(adapter);
 
-/*        lvCartas.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        lvCartas.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
-
-            //whenever you select or deselect an item from the listview
-            @Override
-            public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-
-            }
-
-            @Override
-            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-                return false;
-            }
-
-            @Override
-            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-                return false;
-            }
-
-            @Override
-            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-            }
-
-            @Override
-            public void onDestroyActionMode(ActionMode mode) {
-
-            }
-        });*/
-
         lvCartas.setOnItemClickListener((adapter, fragment, i, l) -> {
             Country country = (Country) adapter.getItemAtPosition(i);
             selectedItems.add(country);
@@ -106,12 +77,5 @@ public class SecondFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         refresh();
-
-/*        view.findViewById(R.id.button_choose_first_country).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_to_FirstFragment);
-            }
-        });*/
     }
 }

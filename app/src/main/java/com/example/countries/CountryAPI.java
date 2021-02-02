@@ -50,11 +50,12 @@ public class CountryAPI {
                 country.setNativeName(jsonCountry.getString("nativeName"));
                 country.setNumericCode(jsonCountry.getString("numericCode"));
 
-                try {
+                 try {
                     country.setFlagUrl(jsonCountry.getString("flag"));
                 } catch (Exception e) {
                     System.out.println("Null image");
                 }
+
                 countries.add(country);
             }
         } catch (JSONException e) {

@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import com.example.countries.Country;
 import com.example.countries.CountryAPI;
 import com.example.countries.CountryAdapter;
-import com.example.countries.DetailedActivity;
 import com.example.countries.DetailedActivity2;
 import com.example.countries.R;
 import com.example.countries.SecondFragment;

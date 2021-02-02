@@ -10,7 +10,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="choose">Choose</string>
-    <string name="first_greeting_rules">Choose 2 countries from the list, then bet on who you think will win</string>
+    <string name="first_greeting_rules">Hi! You can pick 2 countries from the list you\'re about to see. Click on the name to learn more about each country and then bet on who you think would win between the two!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

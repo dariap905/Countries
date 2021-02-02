@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.countries.BetActivity;
 import com.example.countries.Country;
 import com.example.countries.DetailedActivity2;
@@ -69,13 +70,13 @@ public class DetailedCountry2Fragment extends Fragment {
         flagUrl = view.findViewById(R.id.lvFlag);
 
         //name.setText(getString(R.string.country_name, country.getName()));
-        name.setText("Name: " + country.getName());
-        nativeName.setText("Native: " + country.getNativeName());
+        name.setText(country.getName());
+        nativeName.setText(country.getNativeName());
         capital.setText("Capital: " + country.getCapital());
         population.setText("Population: " + country.getPopulation());
         numericCode.setText(country.getNumericCode());
 
-        //Glide.with(getContext()).load(country.getFlagUrl()).into(flagUrl);
+        Glide.with(getContext()).load(country.getFlagUrl()).into(flagUrl);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
