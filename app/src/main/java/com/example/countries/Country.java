@@ -1,14 +1,23 @@
 package com.example.countries;
 
 import java.io.Serializable;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity
 public class Country implements Serializable {
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     private String name;
     private String capital;
     private String population;
     private String nativeName;
     private String numericCode;
     private String flagUrl;
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getName() {
 

@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,7 @@ public class SecondFragment extends Fragment {
 
     private ArrayList<Country> items;
     private CountryAdapter adapter;
+    private CountriesViewModel viewModel;
 
     public static ArrayList<Country> selectedItems;
 
@@ -46,6 +48,12 @@ public class SecondFragment extends Fragment {
             startActivity(intent);
         });
 
+        viewModel = ViewModelProviders.of(this).get(CountriesViewModel.class);
+        viewModel.getCountries().observe(getViewLifecycleOwner(), countries -> {
+            adapter.clear();
+            adapter.addAll(countries);
+        });
+
         return view;
     }
 
@@ -69,8 +77,9 @@ public class SecondFragment extends Fragment {
     }
 
     private void refresh() {
-        RefreshDataTask task = new RefreshDataTask();
-        task.execute();
+        /*RefreshDataTask task = new RefreshDataTask();
+        task.execute();*/
+        viewModel.reload();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
