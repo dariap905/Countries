@@ -1,4 +1,4 @@
-package com.example.countries.ui.main;
+package com.example.countries.ui.detailed;
 
 import androidx.lifecycle.ViewModel;
 

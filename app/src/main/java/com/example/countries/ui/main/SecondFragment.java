@@ -1,4 +1,4 @@
-package com.example.countries;
+package com.example.countries.ui.main;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -11,6 +11,13 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+
+import com.example.countries.ui.tools.CountriesViewModel;
+import com.example.countries.ui.tools.Country;
+import com.example.countries.ui.tools.CountryAdapter;
+import com.example.countries.ui.detailed.DetailedActivity;
+import com.example.countries.R;
+import com.example.countries.ui.tools.CountryAPI;
 
 import java.util.ArrayList;
 

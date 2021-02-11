@@ -1,4 +1,4 @@
-package com.example.countries;
+package com.example.countries.ui.bet;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.countries.ui.tools.Country;
+import com.example.countries.R;
+import com.example.countries.ui.last.FinalLoss;
+import com.example.countries.ui.last.FinalWin;
 
 import java.util.List;
 import java.util.Random;

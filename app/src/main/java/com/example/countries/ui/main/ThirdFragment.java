@@ -12,12 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 
-import com.example.countries.Country;
-import com.example.countries.CountryAPI;
-import com.example.countries.CountryAdapter;
-import com.example.countries.DetailedActivity2;
+import com.example.countries.ui.tools.Country;
+import com.example.countries.ui.tools.CountryAPI;
+import com.example.countries.ui.tools.CountryAdapter;
+import com.example.countries.ui.detailed.DetailedActivity2;
 import com.example.countries.R;
-import com.example.countries.SecondFragment;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.countries.ui.main;
+package com.example.countries.ui.detailed;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
@@ -16,12 +16,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.countries.Country;
+import com.example.countries.ui.bet.BetActivity;
+import com.example.countries.ui.tools.Country;
 import com.example.countries.R;
-import com.example.countries.ThirdFragmentActivity;
 
 
-public class DetailedCountryFragment extends Fragment {
+public class DetailedCountry2Fragment extends Fragment {
 
     private View view;
     private ImageView flagUrl;
@@ -34,15 +34,15 @@ public class DetailedCountryFragment extends Fragment {
 
     DetailedViewModel mViewModel;
 
-    public static DetailedCountryFragment newInstance() {
-        return new DetailedCountryFragment();
+    public static DetailedCountry2Fragment newInstance() {
+        return new DetailedCountry2Fragment();
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_detailed_info, container, false);
+        view = inflater.inflate(R.layout.fragment_detailed_info2, container, false);
 
         Intent i = getActivity().getIntent();
 
@@ -83,10 +83,8 @@ public class DetailedCountryFragment extends Fragment {
         view.findViewById(R.id.button_choose_first_country).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), ThirdFragmentActivity.class);
-               //intent.putExtra("country", country);
+                Intent intent = new Intent(getContext(), BetActivity.class);
                 startActivity(intent);
-                
             }
         });
     }

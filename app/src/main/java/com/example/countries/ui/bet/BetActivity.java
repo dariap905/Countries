@@ -1,20 +1,21 @@
-package com.example.countries;
+package com.example.countries.ui.bet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.countries.ui.main.DetailedCountryFragment;
+import com.example.countries.R;
+import com.example.countries.ui.bet.BetFragment;
 
-public class DetailedActivity extends AppCompatActivity {
+public class BetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detailed_country_activity);
+        setContentView(R.layout.bet_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, DetailedCountryFragment.newInstance())
+                    .replace(R.id.container, BetFragment.newInstance())
                     .commitNow();
         }
     }

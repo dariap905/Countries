@@ -1,7 +1,8 @@
-package com.example.countries;
+package com.example.countries.ui.main;
 
 import android.os.Bundle;
 
+import com.example.countries.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 

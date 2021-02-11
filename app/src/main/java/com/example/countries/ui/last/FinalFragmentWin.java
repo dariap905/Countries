@@ -1,4 +1,4 @@
-package com.example.countries.ui.main;
+package com.example.countries.ui.last;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,25 +14,25 @@ import android.view.ViewGroup;
 
 import com.example.countries.R;
 
-public class FinalFragmentLoss extends Fragment {
+public class FinalFragmentWin extends Fragment {
 
-    private FinalViewModelLoss mViewModel;
+    private FinalViewModelWin mViewModel;
 
-    public static FinalFragmentLoss newInstance() {
-        return new FinalFragmentLoss();
+    public static FinalFragmentWin newInstance() {
+        return new FinalFragmentWin();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.final_fragment_loss, container, false);
+        return inflater.inflate(R.layout.final_fragment_win, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(FinalViewModelLoss.class);
+        mViewModel = new ViewModelProvider(this).get(FinalViewModelWin.class);
         // TODO: Use the ViewModel
     }
 

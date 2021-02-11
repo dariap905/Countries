@@ -5,7 +5,7 @@
     android:id="@+id/bet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.BetFragment">
+    tools:context=".ui.bet.BetFragment">
 
     <LinearLayout
         android:id="@+id/lvNameLayout"

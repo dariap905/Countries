@@ -1,4 +1,4 @@
-package com.example.countries;
+package com.example.countries.ui.tools;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

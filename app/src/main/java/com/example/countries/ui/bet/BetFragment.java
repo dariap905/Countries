@@ -1,4 +1,4 @@
-package com.example.countries.ui.main;
+package com.example.countries.ui.bet;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.countries.BetAdapter;
-import com.example.countries.Country;
+import com.example.countries.ui.tools.Country;
 import com.example.countries.R;
+import com.example.countries.ui.main.ThirdFragment;
 
 import java.util.ArrayList;
 

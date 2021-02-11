@@ -1,9 +1,10 @@
-package com.example.countries;
+package com.example.countries.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.countries.R;
 import com.example.countries.ui.main.ThirdFragment;
 
 public class ThirdFragmentActivity extends AppCompatActivity {

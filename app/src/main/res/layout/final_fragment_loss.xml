@@ -5,7 +5,7 @@
     android:id="@+id/final_loss"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.FinalFragmentLoss">
+    tools:context=".ui.last.FinalFragmentLoss">
 
     <TextView
         android:id="@+id/message"

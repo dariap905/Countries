@@ -1,4 +1,4 @@
-package com.example.countries.ui.main;
+package com.example.countries.ui.bet;
 
 import androidx.lifecycle.ViewModel;
 

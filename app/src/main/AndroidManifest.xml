@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Countries"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FinalLoss"></activity>
-        <activity android:name=".FinalWin" />
-        <activity android:name=".BetActivity" />
-        <activity android:name=".DetailedActivity2" />
-        <activity android:name=".ThirdFragmentActivity" />
-        <activity android:name=".DetailedActivity" />
+        <activity android:name=".ui.last.FinalLoss"></activity>
+        <activity android:name=".ui.last.FinalWin" />
+        <activity android:name=".ui.bet.BetActivity" />
+        <activity android:name=".ui.detailed.DetailedActivity2" />
+        <activity android:name=".ui.main.ThirdFragmentActivity" />
+        <activity android:name=".ui.detailed.DetailedActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Countries.NoActionBar">
             <intent-filter>

@@ -1,4 +1,4 @@
-package com.example.countries;
+package com.example.countries.ui.tools;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

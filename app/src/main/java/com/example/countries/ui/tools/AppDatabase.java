@@ -1,4 +1,4 @@
-package com.example.countries;
+package com.example.countries.ui.tools;
 
 import android.content.Context;
 
